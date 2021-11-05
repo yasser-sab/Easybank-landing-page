@@ -1,0 +1,27 @@
+/* start globale rules */
+
+	html {
+		font-size: 100%;
+	}
+	
+	*,
+	*::before,
+	*::after {
+		padding:0;
+		margin:0;
+		box-sizing: border-box;
+	}
+
+	body {
+		box-sizing:inherit;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	a {
+		display: inline-block;
+	}
+
+/* end globale rules */
