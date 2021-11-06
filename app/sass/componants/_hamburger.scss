@@ -1,0 +1,33 @@
+.header__burger {
+	position: relative;
+	width:em(24px);
+	height:em(11px);
+	cursor: pointer;
+
+	span {
+		//display:block;
+
+		height:9.09090909%;
+
+		background-color:$dark-blue;
+
+		transition:transform,opacity, .2s ease-in-out;
+	}
+
+	@include respond(tab-land) {
+		display: none;
+	}
+}
+
+.cbx:checked + label.header__burger >  {
+	& > span:first-of-type {
+		transform: translateY(500%) rotate(45deg);
+	}
+	& > span:nth-of-type(2) {
+		transform: translateX(-50%);
+		opacity:0;
+	}
+	& > span:last-of-type {
+		transform: translateY(-500%) rotate(-45deg);
+	}
+}

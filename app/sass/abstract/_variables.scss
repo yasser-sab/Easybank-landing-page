@@ -1,63 +1,64 @@
 /* start variables rules*/
 
-	:root {
-
 	/* start colors variables */
 
 		/* primary */
 
-		--dark-blue: hsl(233, 26%, 24%);
-		--lime-green: hsl(136, 65%, 51%);
-		--bright-cyan: hsl(192, 70%, 51%);
+		$dark-blue: hsl(233, 26%, 24%);
+		$lime-green: hsl(136, 65%, 51%);
+		$bright-cyan: hsl(192, 70%, 51%);
 
 		/* neutral */
 
-		--grayish-blue: hsl(233, 8%, 62%);
-		--light-grayish-blue: hsl(220, 16%, 96%);
-		--very-light-gray: hsl(0, 0%, 98%);
-		--white: hsl(0, 0%, 100%);
+		$grayish-blue: hsl(233, 8%, 62%);
+		$light-grayish-blue: hsl(220, 16%, 96%);
+		$very-light-gray: hsl(0, 0%, 98%);
+		$white: hsl(0, 0%, 100%);
 
 		/* gradient */
 
-		--gradient-1:linear-gradient(
-			var(--white),
-			var(--dark-blue)
+		$gradient-1:linear-gradient(
+			$white,
+			$dark-blue
 		);
 
-		--gradient-2:linear-gradient(
+		$gradient-2:linear-gradient(
 			to right,
-			var(--lime-green),
-			var(--bright-cyan)
+			$lime-green,
+			$bright-cyan
 		);
 
 	/* end colors variables */
 
 	/* start font variables */
 
-		--fs:18;
-		--ff:'Public Sans', sans-serif;
-		--fw-s:300;
-		--fw-m:400;
-		--fw-l:700;
+		$fs:18px;
+		$ff:'Public Sans', sans-serif;
+		$fw-s:300;
+		$fw-m:400;
+		$fw-l:700;
 
 	/* end font variables */
 
 	/* start layout variables */
 
-	/*--mobile-width:350;*/
-	/*--desktop-width:1440px;*/
+		/*--mobile-width:350;*/
+		/*--desktop-width:1440px;*/
 
-	--device-width:350;
+		//$device-width:350px;
+		$device-width:760px;
 
-	/*--container-side-size:calc(24 / var(--fs) * 1rem);
-	/*--container-size:calc(100% - var(--container-side-size) * 2);*/
+		$container-side-size:(24px/$device-width)*100%;
+		$container-size:(100% - ($container-side-size * 2));
 
-	--container-side-size: calc(24 / var(--device-width) * 100%);
-	--container-size:calc(100% - (var(--container-side-size) * 2));
+		$z-index-s:-1;
+		$z-index-m:1;
+		$z-index-l:2;
+
+		$border-radius-s:.3em;
+		$border-radius-l:em(100px);
 
 	/* end layout variables */
-
-	}
 
 	@media screen and (min-width:600px) {
 		:root {

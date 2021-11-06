@@ -1,12 +1,13 @@
 /* start hero section rules */
 
 	.hero {
+
 	}
 
 	.hero__img {
 		position: relative;
 		height: em(280px);
-		//background:url('../../images/bg-intro-mobile.svg') no-repeat center center / cover;
+		background:url('../../images/bg-intro-mobile.svg') no-repeat center center / cover;
 	}
 
 	.hero__img::after {

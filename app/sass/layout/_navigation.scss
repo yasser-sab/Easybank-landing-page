@@ -1,0 +1,107 @@
+.header {
+
+	&__nav {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		border-radius: $border-radius-s;
+		z-index: $z-index-m;
+		background-color: $white;
+
+		transform: translateY($container-side-size) scale(0);
+		transition: transform .3s ease-in-out;
+
+		@include respond(tab-land) {
+			position: static;
+			width: auto;
+			border-radius: 0;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	&__list {
+		padding: em(35px);
+
+		@include respond(tab-land) {
+			padding: 0;
+			display: flex;
+		}
+	}
+
+	&__item {
+		color: $dark-blue;
+		font-size: em(18px);
+		text-transform: capitalize;
+		
+
+		&:not(:last-child) {
+			margin-bottom:em(27px);
+
+			@include respond(tab-land) {
+				margin: 0;
+				margin-right:em(32px);
+			}
+		}
+
+		&:after {
+			@include respond(tab-land) {
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom:0;
+				width: 100%;
+				height: em(4px);
+				background: $gradient-2;
+				transform:translateY(em(31px));
+				opacity: 0;
+				visibility:hidden;
+
+				transition: opacity, .3s ease-in-out;
+			}
+
+			
+		}
+
+		&:hover {
+			@include respond(tab-land) {
+				color: $dark-blue;
+			}
+
+			&::after {
+				@include respond(tab-land) {
+					visibility:visible;
+					opacity: 1;
+				}
+			}
+		}
+
+
+		@include respond(tab-land) {
+			position: relative;
+			color: $grayish-blue;
+			transition: color, .3s ease-in-out;
+		}
+
+	}
+	
+}
+
+.cbx:checked ~ .header__nav {
+	transform: translateY($container-side-size) scale(1);
+}
+
+@include respond(tab-land) {
+	.cbx:checked ~ .header__nav {
+		transform: translateY(0) scale(1);
+	}
+}
+
+.isActive.header__item {
+	color: $dark-blue;
+}
+
+.isActive.header__item::after {
+	opacity: 1;
+	visibility:visible;
+}

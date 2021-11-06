@@ -21,7 +21,11 @@
 	}
 
 	a {
-		display: inline-block;
+		display: flex;
+	}
+
+	.cbx {
+		display: none;
 	}
 
 /* end globale rules */

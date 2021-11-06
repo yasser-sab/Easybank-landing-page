@@ -1,0 +1,5 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint==tab-land {
+		@media(min-width:$device-width) {@content;}
+	}
+}

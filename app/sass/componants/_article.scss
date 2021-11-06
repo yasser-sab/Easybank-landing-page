@@ -1,0 +1,40 @@
+.article {
+	border-radius: .3em;
+	overflow: hidden;
+	box-shadow: calc(2 / var(--fs) * 1em) calc(5 / var(--fs) * 1em) calc(20 / var(--fs) * 1em) 0 rgba(0 ,0 ,0,.1);
+}
+
+.article__img {
+	width: 100%;
+	height: calc(200 / var(--fs) * 1em);
+	object-fit: cover;
+	display: block;
+
+}
+
+.article__text {
+	background-color: var(--white);
+	padding: calc(30 / var(--fs) * 1em);
+}
+
+.article__autor {
+	--new-fs:10;
+	display: inline-block;
+	font-size: calc(var(--new-fs) / var(--fs) * 1em);
+	color:var(--grayish-blue);
+	margin-bottom: calc(15 / var(--new-fs) * 1em);
+	display: block;
+}
+
+.article__heading {
+}
+
+
+.article__para {
+	--new-fs:12;
+	--nb-lines:4;
+
+	/*simple calculation for 3 line height*/
+	height: calc((var(--new-fs) * 1.5 * var(--nb-lines)) / var(--new-fs) * 1em);
+	overflow-y: scroll;
+}

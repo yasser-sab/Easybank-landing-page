@@ -1,0 +1,17 @@
+.btn {
+	$new-fs:13px;
+
+	font-size: em($new-fs);
+	color:$white;
+	padding:em(15px,$new-fs) em(34px,$new-fs);
+	background-image: $gradient-2;
+	border-radius: $border-radius-l;
+	display:inline-block;
+
+	transition:opacity .3s ease-in-out;
+
+	&:hover {
+		opacity: .5;
+	}
+
+}

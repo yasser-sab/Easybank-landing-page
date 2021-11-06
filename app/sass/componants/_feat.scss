@@ -1,0 +1,16 @@
+.feat {
+}
+
+.feat p {
+	--nb-lines:4;
+
+	text-align: justify-all;
+	height: calc((var(--fs) * 1.5 * var(--nb-lines)) / var(--fs) * 1em);
+	overflow-y: scroll;
+}
+
+.feat__img {
+	width: calc(70 / var(--fs) * 1em);
+	height: calc(70 / var(--fs) * 1em);
+	margin-bottom: calc(30 / var(--fs) * 1em);
+}
