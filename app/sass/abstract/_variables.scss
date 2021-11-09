@@ -14,6 +14,7 @@
 		$light-grayish-blue: hsl(220, 16%, 96%);
 		$very-light-gray: hsl(0, 0%, 98%);
 		$white: hsl(0, 0%, 100%);
+		$black:#000;
 
 		/* gradient */
 
@@ -45,8 +46,9 @@
 		/*--mobile-width:350;*/
 		/*--desktop-width:1440px;*/
 
-		//$device-width:350px;
-		$device-width:760px;
+		$device-width:350px;
+		$device-width:415px;
+		$device-width:745px;
 
 		$container-side-size:(24px/$device-width)*100%;
 		$container-size:(100% - ($container-side-size * 2));
@@ -58,15 +60,8 @@
 		$border-radius-s:.3em;
 		$border-radius-l:em(100px);
 
-	/* end layout variables */
+		$box-shadow-s:em(2px) em(5px) em(20px) 0 rgba($black,.1);
 
-	@media screen and (min-width:600px) {
-		:root {
-			--device-width:1440;
-			--container-side-size: calc(160 / var(--device-width) * 100%);
-			/*--container-side-size:calc(160 / var(--fs) * 1em);*/
-			/*--fs:15;*/
-		}
-	}
+	/* end layout variables */
 
 /* end variables rules*/

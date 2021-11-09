@@ -1,40 +1,67 @@
-.article {
-	border-radius: .3em;
-	overflow: hidden;
-	box-shadow: calc(2 / var(--fs) * 1em) calc(5 / var(--fs) * 1em) calc(20 / var(--fs) * 1em) 0 rgba(0 ,0 ,0,.1);
-}
+.articles {
+	$gap:em(24px);
+	--g:24px;
+	gap:$gap;
+	padding-top: em(11px);
 
-.article__img {
-	width: 100%;
-	height: calc(200 / var(--fs) * 1em);
-	object-fit: cover;
-	display: block;
+	.article {
+		border-radius: $border-radius-s;
+		overflow: hidden;
+		box-shadow: $box-shadow-s;
 
-}
+		&__img {
+			width: 100%;
+			height: em(200px);
+			object-fit: cover;
+			display: block;
+		}
 
-.article__text {
-	background-color: var(--white);
-	padding: calc(30 / var(--fs) * 1em);
-}
+		&__text {
+			background-color: $white;
+			padding: em(30px);
+		}
 
-.article__autor {
-	--new-fs:10;
-	display: inline-block;
-	font-size: calc(var(--new-fs) / var(--fs) * 1em);
-	color:var(--grayish-blue);
-	margin-bottom: calc(15 / var(--new-fs) * 1em);
-	display: block;
-}
+		&__autor {
+			$new-fs:10px;
+			display: inline-block;
+			font-size: em($new-fs);
+			color:$grayish-blue;
+			margin-bottom: em(15px,$new-fs);
+			display: block;
+		}
 
-.article__heading {
-}
+		&__heading {
+			display:inline-block;
+			@include respond(laptop) {
+				transition: color .3s ease-in-out;
 
+				&:hover {
+					color: $lime-green;
+				}
+			}
+		}
 
-.article__para {
-	--new-fs:12;
-	--nb-lines:4;
+		&__para {
+			$new-fs:12px;
+			$nb-lines:3;
 
-	/*simple calculation for 3 line height*/
-	height: calc((var(--new-fs) * 1.5 * var(--nb-lines)) / var(--new-fs) * 1em);
-	overflow-y: scroll;
+			/*simple calculation for 3 line height*/
+
+			height:em($new-fs * 1.5 * $nb-lines,$new-fs);
+			overflow-y: scroll;
+
+			@include respond(tab-land) {
+				$nb-lines:4;
+			}
+		}
+
+		@include respond(tab-land) {
+			flex-basis: calc(50% - var(--g) + var(--g) / 2);
+		}
+
+		@include respond(laptop) {
+			flex-basis: calc(25% - var(--g) + var(--g) / 4);
+		}
+	}
+
 }

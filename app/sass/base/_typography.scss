@@ -29,13 +29,17 @@
 		}
 		&-tertory {
 			$new-fs:19px;
-			$nb-lines:2;
+			$nb-lines:1;
 
 			font-size:$new-fs;
 			margin-bottom: em(25px,$new-fs);
 
 			height:em($new-fs * 1.5 * $nb-lines,$new-fs);
 			overflow-y: scroll;
+
+			@include respond(tab-land) {
+				$nb-lines:2;
+			}
 		}
 		&-fourty {
 			$new-fs:15px;
@@ -54,11 +58,4 @@
 		font-weight: $fw-s;
 		line-height: 1.5;
 	}
-
-
-
-	
-
-	
-
 /* end typographie rules */

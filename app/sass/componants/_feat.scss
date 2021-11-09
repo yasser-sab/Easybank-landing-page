@@ -1,16 +1,36 @@
 .feat {
-}
 
-.feat p {
-	--nb-lines:4;
+	$gap:36px;
 
-	text-align: justify-all;
-	height: calc((var(--fs) * 1.5 * var(--nb-lines)) / var(--fs) * 1em);
-	overflow-y: scroll;
-}
+	--g:36px;
+		
+	&-container {
+		gap:$gap;
+		padding-top: em(60px);
+	}
+	
 
-.feat__img {
-	width: calc(70 / var(--fs) * 1em);
-	height: calc(70 / var(--fs) * 1em);
-	margin-bottom: calc(30 / var(--fs) * 1em);
+	&__img {
+		width: em(70px);
+		height: em(70px);
+		margin-bottom: em(30px);
+	}
+
+	&__para {
+		$new-fs:$fs;
+		$nb-lines:4;
+
+		text-align: justify-all;
+		height:em($new-fs * 1.5 * $nb-lines,$new-fs);
+			overflow-y: scroll;
+		overflow-y: scroll;
+	}
+
+	@include respond(tab-land) {
+		flex-basis: calc(50% - var(--g) + var(--g) / 2);
+	}
+
+	@include respond(laptop) {
+		flex-basis: calc(25% - var(--g) + var(--g) / 4);
+	}
 }

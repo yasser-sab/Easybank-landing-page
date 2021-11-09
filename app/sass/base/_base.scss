@@ -28,4 +28,12 @@
 		display: none;
 	}
 
+	.heading {
+		display:inline-block;
+
+		&-tertory {
+			display:block;
+		}
+	}
+
 /* end globale rules */

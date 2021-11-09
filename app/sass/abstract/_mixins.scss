@@ -2,4 +2,8 @@
 	@if $breakpoint==tab-land {
 		@media(min-width:$device-width) {@content;}
 	}
+	@elseif $breakpoint==laptop {
+		@media(min-width:em(1040px)) {@content;}
+	}
+
 }
